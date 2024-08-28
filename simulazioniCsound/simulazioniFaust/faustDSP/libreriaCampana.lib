@@ -1,0 +1,389 @@
+import("stdfaust.lib");
+
+declare name "LibreriaCampana";
+declare author "Giulio Romano De Mattia";
+declare copyright "Giulio Romano De Mattia 2024 ©";
+declare version "1.00";
+declare license "MIT"; 
+
+//======================================================================================================
+//                                          PATCH
+mainPatch(x) = hgroup("Main",x);
+group(x) = hgroup("INPUT-general",x);
+subgroup(x) = hgroup("[0]input",x);
+
+//======================================================================================================
+
+
+
+
+
+
+
+//======================================================================================================
+//                                          INPUT
+
+input = par(i,2,(_ <: attach(_,abs : ba.linear2db : mainPatch(group(subgroup(vbargraph("Level %i",-60,0)))))));
+//-----------
+inputMid = _,_ : + : (_ <: attach(_,abs : ba.linear2db : mainPatch(group(vbargraph("[2]Input Mid",-60,0)))));
+//-----------
+rmsInputVis(timeRMS) = (_ : movingAverageRMS(timeRMS) <: attach(_,abs : ba.linear2db : mainPatch(group(vbargraph("[3]RMS",-60,0)))));
+//-----------
+peakInputVis(timePeak) = (_ : peakenvelope(timePeak) <: attach(_,abs : ba.linear2db : mainPatch(group(vbargraph("[4]Peak",-60,0)))));
+//-----------
+picchiMediaInputVis(peakTime,peakTresh,secCounter,timeSmooth) = (_ : frequenzaPicchi(peakTime,peakTresh,secCounter,timeSmooth) <: attach(_,abs : ba.linear2db : mainPatch(group(vbargraph("[5]f-Picchi[style:numerical][tooltip:frequenza media picchi campana]",-60,+20)))));
+
+
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+//                                          basic
+
+
+bpm2Hz(bpm) = bpm / 60.0;
+hz2Bpm(hz) = hz * 60.0;
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+//                                      FILTRI E INTEGRATORI
+delayFbk(s,fbk) = (+ : de.delay(ma.SR, ba.sec2samp(s)-1))~*(fbk);
+//-----------
+sdelayFbk(s,fbk) = (+ : de.sdelay(ma.SR, int(ma.SR/10), ba.sec2samp(s)-1))~*(fbk);
+//-----------
+delayFbkNorm(s,fbk) = _*(1-fbk):(+ : de.delay(ma.SR, ba.sec2samp(s)-1))~*(fbk);
+//-----------
+delayFbkNormTimeVar(s,fbk,interp) = _*(1-fbk):(+ : de.sdelay(ma.SR, interp, ba.sec2samp(s)-1))~*(fbk);
+//-----------
+lp1p(g) = *(1-g):+~*(g);
+
+integrator(s) = abs : lp1p(aapp(1/s))
+    with{
+        twopi = 2*ma.PI;
+        omega(fc) = fc*twopi/ma.SR;
+        aapp(fc) = pow(ma.E, 0-omega(fc));
+
+    };
+//-----------
+BPTPTNormalized(gf, bw, cf, x) = loop ~ si.bus(2) : (! , ! , _ * gf)
+    with {
+        g = tan(cf * ma.PI * ma.T);
+        R = 1.0 / (2.0 * bw);
+        G1 = 1.0 / (1.0 + 2.0 * R * g + g * g);
+        G2 = 2.0 * R + g;
+        loop(s1, s2) = u1 , u2 , bp * 2.0 * R
+            with {
+                hp = (x - s1 * G2 - s2) * G1;
+                v1 = hp * g;
+                bp = s1 + v1;
+                v2 = bp * g;
+                lp = s2 + v2;
+                u1 = v1 + bp;
+                u2 = v2 + lp;
+            };
+    };
+//-----------
+/*apf(t,g,x) = x<: _*(-g) , ((_+_ : de.delay(ma.SR,t-1))~*(g))*(1-g^2) : _ + mem;
+apfV(t,g,x) = x<: _*(-g) , ((_+_ : de.sdelay(ma.SR,2048,t-1))~*(g))*(1-g^2) : _ + mem;
+
+apfo(0,t,g,x) = x;
+apfo(1,t,g,x) = apf(t,g,x);
+apfo(n,t,g,x) = (x+_ : *(-g) <: _+x,_ : apfo(n-1,t,g),_ : de.delay(ma.SR,t-1),_)~(0-_) : mem+_;
+*/
+//-----------
+peakenvelope(period, x) = loop ~ _
+    with {
+        loop(y) = max(abs(x), y * coeff);
+        twoPIforT = (2.0 * ma.PI) * (1.0 / ma.SR);
+        coeff = exp(-twoPIforT / max(ma.EPSILON, period));
+    };
+//-----------
+peakHolder(holdTime, x) = loop ~ si.bus(2) : ! , _
+with {
+    loop(timerState, outState) = timer , output
+    with {
+        isNewPeak = abs(x) >= outState;
+        isTimeOut = timerState >= (holdTime * ma.SR - 1);
+        bypass = isNewPeak | isTimeOut;
+        timer = ba.if(bypass, 0, timerState + 1);
+        output = ba.if(bypass, abs(x), outState);
+    };
+};
+//-----------
+movingAverage(seconds, x) = x - x@(seconds * ma.SR) : fi.pole(1) / (seconds * ma.SR);
+//-----------
+movingAverageRMS(seconds, x) = sqrt(max(0, movingAverage(seconds, x ^ 2)));
+//-----------
+avg(t, x) = y
+    letrec {
+        'y = x + alpha * (y - x);
+    }
+        with {
+            alpha = exp((-2.0 * ma.PI * ma.T) / t);
+        };
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+//                                              GESTI
+// funzioni pressoché deprecate
+IntonazioneImpulsivo = 0.000285;
+IntonazioneSostenuto = 0.0014;
+rangeOpen=hslider("sec", 0.2, 0, 0.4, 0.001);
+
+catenaEnv0(at,ig) = _ : (integrator(ig) : delayFbk(0.0001,0.94) : mapQ);
+//-----------
+camp0(at,ig) = _ <: de.delay(ma.SR,ba.sec2samp(at)) * (integrator(ig) : delayFbk(0.0001,0.94) : mapQ);
+//-----------
+ampVar = _:integrator(0.01) : delayFbk(0.0005,.96) <: mapQRev,map2QRev;
+//-----------
+filtraggioVariabile(x) = fi.highpass(1,200+1000*(1-x));
+//-----------
+sostenuto = _ <: ((integrator(0.01) : delayFbk(0.0001,.94) : mapQ) <: _, (_* no.noise*0.09 : delayFbkNorm(0.0014,.99) : fi.lowpass(2,713)) : filtraggioVariabile);
+//-----------
+impulsivo(x) = x : (integrator(0.01) : delayFbk(0.0001,.94) : mapQ)*(no.noise*.09 : delayFbkNormTimeVar(ampVar(x)*0.000004+IntonazioneImpulsivo,.99,ma.SR*2) : fi.highpass(1,4000))
+with{
+    ampVar(x) = x:integrator(0.1) : delayFbk(0.01,.99) : map4Q : integrator(5);
+    ampVar1(x) = x:integrator(0.1) : delayFbk(0.01,.99) : map2Q;
+};
+//-----------
+ribattuto(x) = x<: ampVar(x) * delayFbkNormTimeVar((ampVar(x)*rangeOpen+IntonazioneImpulsivo),.99,ma.SR)
+with{
+    ampVar(x) = x:integrator(0.01) : delayFbk(0.0001,.94) : mapQ;
+};
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+// funzioni pressoché deprecate
+//                                          MAPPING
+
+mapL(x) = (1-x);
+//-----------
+mapQ(x) = (1-x)^2;
+map2Q(x) = (1-x)^4;
+map3Q(x) = (1-x)^6;
+map4Q(x) = (1-x)^8;
+//-----------
+mapQRev(x) = x^(1/2);
+map2QRev(x) = x^(1/4);
+map3QRev(x) = x^(1/6);
+map4QRev(x) = x^(1/8);
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+//                                          TRESHOLD
+diffTresh(x) = x > x';
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+//                                    FILTER BANK
+
+bpBank(qFilBank) = si.bus(6):  BPTPTNormalized(10, qFilBank, 713),  BPTPTNormalized(10,qFilBank, 1844), BPTPTNormalized(10, qFilBank, 3284), BPTPTNormalized(10, qFilBank, 4946),BPTPTNormalized(10, qFilBank, 6788), BPTPTNormalized(10, qFilBank, 7744);
+
+
+bpBankFmul(freqDev,qFilBank) = si.bus(6): par(i,6,BPTPTNormalized(10,qFilBank,ba.take(i+1,freqList)*freqDev));
+bpBankFsum(freqDev,qFilBank) = si.bus(6): par(i,6,BPTPTNormalized(10,qFilBank,ba.take(i+1,freqList)+freqDev));
+bpBankFmulSum(scale, shift,qFilBank) = si.bus(6): par(i,6,BPTPTNormalized(10,qFilBank,ba.take(i+1,freqList)*scale+shift));
+
+// funzione pressoché deprecata
+bpBank2(qFilBank,in) = si.bus(6) : BPTPTNormalized(10, qFilBank, 713-(in*1000)), BPTPTNormalized(10,qFilBank, 1844-(in*1000)), BPTPTNormalized(10, qFilBank, 3284-(in*1000)), BPTPTNormalized(10, qFilBank, 4946-(in*1000)), BPTPTNormalized(10, qFilBank, 6788-(in*1000)), BPTPTNormalized(10, qFilBank, 7744-(in*1000));
+//-----------
+freqList = (713,1844,3284,4946,6788,7744);
+//-----------
+// c'è un gain maggiore negli ultimi filtri
+bpBankPeakEnv = _ <: peakenvelope(.1, BPTPTNormalized(20, 1000, 713)), peakenvelope(.1, BPTPTNormalized(20, 1000, 1844)), peakenvelope(.1, BPTPTNormalized(10, 1000, 3284)), peakenvelope(.1, BPTPTNormalized(50, 1000, 4946)), peakenvelope(.1, BPTPTNormalized(100, 1000, 6788)), peakenvelope(.1, BPTPTNormalized(100, 1000, 7744));
+
+bpBankPeakEnv2 = _ <: peakenvelope(.1, BPTPTNormalized(20, 1000, 713)), peakenvelope(.1, BPTPTNormalized(20, 1000, 1844)), peakenvelope(.1, BPTPTNormalized(10, 1000, 3284)), peakenvelope(.1, BPTPTNormalized(50, 1000, 4946)), peakenvelope(.1, BPTPTNormalized(10, 1000, 6788)), peakenvelope(.1, BPTPTNormalized(10, 1000, 7744));
+
+// i band pass non sono all'interno del ciclo di feedback del peakenvelope
+// funzione pressoché deprecata
+bpBankPeakEnvNotNested = _ <: BPTPTNormalized(10, 1000, 713), BPTPTNormalized(10, 1000, 1844), BPTPTNormalized(10, 1000, 3284), BPTPTNormalized(10, 1000, 4946), BPTPTNormalized(10, 1000, 6788), BPTPTNormalized(10, 1000, 7744) : par(i,6,peakenvelope(0.1));
+
+bpDelEnv(fbTime,fbgI) = par(i,6,delayFbk(fbTime,fbgI/*(+i*0.05)*/));
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+//                                    OSCILLATORS
+
+phasor(f)= (1/ma.SR)*f : + ~ %(1);
+// p must be integer, so p > 1
+pulse(n,p) = period(max(1,p)) : _ < n;
+period(p) = %(int(p))~+(1');
+
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+//                                          LINE    
+line(value, trigger) = (feedf ~ feedb)
+ with 
+    {   
+        break = value;
+        y = trigger > trigger';
+        feedf(x) = (x > 0) + (x * (x > 0)) + y;
+        feedb(x) = (x <= break) * x;
+        offset(x) = ((x - 1) > 0) * (x - 1);
+    };
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+//                                          CONTATORE PICCHI
+
+rilevatorePicchi(time,tresh) = (_ <: (peakenvelope(time) > tresh : (line(ma.SR*time) / (ma.SR*time)) > 0 : diffTresh));
+//-----------
+reset(sec)=phasor(1/sec)<1;
+//-----------
+counter(sec)=_:(+:*(reset(sec)))~_;
+//-----------
+/*counter(seconds,trig) = upfront(trig) : + ~ (_ * (0 : (+ ~ (_+(1/ba.sec2samp(seconds))) % 1) < .999))
+    with {
+        upfront(x) = x > x';
+        };*/
+//-----------
+peakMaxTimer(secCounter) =  max ~ _ *reset(secCounter-ba.samp2sec(100)); 
+//-----------
+frequenzaPicchi(peakTime,peakTresh,secCounter,timeSmooth)=_:rilevatorePicchi(peakTime,peakTresh):counter(secCounter)/secCounter :
+peakMaxTimer(secCounter):integrator(timeSmooth);
+//-----------
+// funzione pressoché deprecata
+frequencyPeak(timeRP,treshRP, tA,tI) = rilevatorePicchi(timeRP,treshRP) : avg(tA) * ma.SR ;
+//======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================================================================================================
+// FUNZIONI DA INSERIRE NELLA LIBRERIA 
+// segnali di controllo del Q dei filtri bandpass
+mappingQfilter6(secCounter) = ma.E^frequenzaPicchi(timePeak,pkTresh,secCounter,2)*2: _+400 : _ ,1000 : min : peakHolder(3) : integrator(0.3);
+mappingQfilter5(secCounter) = ma.E^frequenzaPicchi(timePeak,pkTresh,secCounter,2)*2: _+200 : _ ,1000 : min : peakHolder(3) : integrator(0.3);
+mappingQfilter4(secCounter) = ma.E^frequenzaPicchi(timePeak,pkTresh,secCounter,2)*2: _+50 : _ ,1000 : min : peakHolder(7) : integrator(0.3);
+mappingQfilter3(secCounter) = ma.E^frequenzaPicchi(timePeak,pkTresh,secCounter,2): _+50 : _ ,1000 : min : peakHolder(3) : integrator(0.3);
+mappingQfilter2(secCounter) = ma.E^frequenzaPicchi(timePeak,pkTresh,secCounter,2) : _+50 : _ ,1000 : min : integrator(0.3);
+//======================================================================================================

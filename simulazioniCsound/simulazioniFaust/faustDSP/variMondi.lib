@@ -1,0 +1,177 @@
+import("stdfaust.lib");
+import("libreriaCampana.lib");
+import("mspan.lib");
+import("schroederAllpass.lib");
+
+//default values
+// richiamare con dot notation
+// def.fbTime
+def = environment {
+    timeRMS = 0.05;
+    timePeak = .1;
+    pkTresh = -25 : ba.db2linear;
+    fbTime = .15;
+    fbgI = .5;
+};
+
+
+// ---------
+//  INPUT RISINTESI
+inNoiseBank = par(i,6,inNoise) ;
+inPulseBank = si.bus(6) : par(i,6,inPulse) ;
+inPulseBank2 = si.bus(6) : par(i,6,inPulse2) ;
+inNoise = (no.noise*0.5);
+inPulse(in) = ba.pulsen(10, ma.SR/(3+(freq2(in))+5*(1-in))) ;
+inPulse2(in) = ba.pulsen(10, ma.SR/(6+(freq3(in)))) ;
+// frequenza del pulsen
+// ---------
+
+
+// ---------
+//.  --> con sequence
+freq(in) = frequencyPeak(0.1,0.15,2,2,in)*2 , 17: min;
+//.  --> con chord
+freq2(x) = peakenvelope(.2,x)*15 , 15: min ;
+freq3(in) = in:frequenzaPicchi(timePeak,pkTresh,.6,5)^2 : peakHolder(4);
+// ---------
+// funzioni componenti delle funzioni *Bank e *FbkBank
+fDev(freqDev,in) = freqDev+(freqDev/2)*(movingAverageRMS(.05,in):peakHolder(6));
+fDev2(freqDev,in) = freqDev;
+fDev3(freqDev,in) = freqDev+(freqDev/15)*(peakenvelope(.2,in):peakHolder(6));
+// ---------
+
+
+// ---------
+chooseFilter = rilevatorePicchi(0.1,0.15) : sah(no.noise) :+(1):/(2):* (6) : min(6) : int;
+chooseFilter2 = rilevatorePicchi(0.1,0.15) : sah(no.noise) :+(1):/(2):* (5) : +(1) : min(6) : int;
+chooser(seed,in) = sahNoise((frequenzaPicchi(0.1,timePeak,1.5,2,in),6:min),seed)+1 : /(2): *(6):int;
+chooser2(seed,in) = sahNoise((frequenzaPicchi(0.1,timePeak,1.5,2,in),6:min),seed)+1 : /(2): *(5): +(1) :int;
+chooserFbk(fbTime,fbgI,seed,in) = sahNoise((frequenzaPicchi(0.1,timePeak,1.5,2,in),6:min),seed)+1 : /(2): *(6) : delayFbk(fbTime,fbgI);
+sampHold(in) = no.noise+1:/(2):*(6):ba.sAndH(rilevatorePicchi(0.1,0.15,in));
+// ---------
+
+
+
+
+
+// ---------
+//-- NOISE
+noiseBank(qFilBank) = bpBankPeakEnv , (inNoiseBank : bpBank(qFilBank)) : routingEnv;
+noiseFbkBank(freqDev,fbTime,fbgI,qFilBank,in) = (in : bpBankPeakEnv : bpDelEnv(fbTime,fbgI)), (inNoiseBank : bpBankFmul(fDev,qFilBank)) : routingEnv
+    with{
+        condition = freqDev == 1;
+        else = freqDev+(freqDev/2)*(movingAverageRMS(.05,in):peakHolder(6));
+        fDev = ba.if(condition, 1, else);
+    };
+noiseFbkBank2(fDev,freqDev,fbTime,fbgI,qFilBank,in) = (in : bpBankPeakEnv : bpDelEnv(fbTime,fbgI)), (inNoiseBank : bpBankFmul(fDev(freqDev,in),qFilBank)) : routingEnv;
+noiseFbkBank3(fShift, fDev,fScale,fbTime,fbgI,qFilBank,in) = (in : bpBankPeakEnv : bpDelEnv(fbTime,fbgI)), (inNoiseBank : bpBankFmulSum(fDev(fScale,in),fShift,qFilBank)) : routingEnv;
+// ---------
+
+
+
+// ---------
+//-- IMPULSE
+impulseBank(qFilBank) = bpBankPeakEnv <:  (inPulseBank : bpBank(qFilBank)), si.bus(6) : routingEnv;
+impulseFbkBank(freqDev,fbTime,fbgI,qFilBank,in) = in : bpBankPeakEnv : bpDelEnv(fbTime,fbgI) <:  
+                            (inPulseBank : bpBankFmul(fDev,qFilBank)), 
+                            si.bus(6) : routingEnv
+                            with{
+                                //fDev = freqDev+(freqDev/2)*(movingAverageRMS(.05,in):peakHolder(6));
+                                fDev = freqDev;
+                                //fDev = freqDev-(freqDev/10)*(movingAverageRMS(.1,in):peakHolder(6));
+                            };
+impulseFbkBank2(fDev,freqDev,fbTime,fbgI,qFilBank,in) = in : bpBankPeakEnv : bpDelEnv(fbTime,fbgI) <:  
+                            (inPulseBank : bpBankFmul(fDev(freqDev,in),qFilBank)), 
+                            si.bus(6) : routingEnv;
+impulseFbkBank3(fShift, fDev,fScale,fbTime,fbgI,qFilBank,in) = in : bpBankPeakEnv : bpDelEnv(fbTime,fbgI) <:  
+                            (inPulseBank2 : bpBankFmulSum(fDev(fScale,in),fShift,qFilBank)), 
+                            si.bus(6) : routingEnv;
+
+
+// ---------
+makeMidSide2(i,degI) = mspan(.7,(degI*ma.PI/180));
+makeMidSide(i,degI) = mspan(1,(degI*ma.PI/180)*i*((os.osc(.1+i*.01)*.1+.9)));
+makeMidSide5(i,degI,in) = in : mspan(.6,((ma.signum(degI)*((abs(degI)+radianFun(.5,2,in)+radianFun2(in)^2)*2)*ma.PI/180))*i);
+makeMidSide4(i,degI,in) = in : mspan(.6,((ma.signum(degI)*((abs(degI)+radianFun(.5,2,in)+radianFun2(in)^2)*2)*ma.PI/180)));
+makeMidSide3(i,degI) = mspan(.9,(degI*ma.PI/180)+((degI*ma.PI/180)/(i+1)));
+// ---------
+//freqList = (713,1844,3284,4946,6788,7744);
+
+// ---------
+
+radianFun2(in) = in <: (movingAverageRMS(.1)*50 : integrator(1.2));
+radianFun(secCounter,sec,in) = in : frequenzaPicchi(timePeak,pkTresh,secCounter,1)^2.3 ;
+
+//process = _ <: _,_,((abs(1)+radianFun(.3,2)+radianFun2^2));
+//process = _ <: _, _,radianFun2;
+
+
+// ---------
+// FUNZIONI PRINCIPALI
+//______________________________
+chord = \(fx,fx2,degI).
+    (_ <: (fx,_ : fx2 : par(i,6,makeMidSide(i,degI)):> si.bus(2): sdmx));
+//______________________________
+sequencer = \(fx,fx2,fx3,degI,in).
+    ( in <: (fx,_ : fx2 : ba.selectxbus(1,6, 8192,fx3(in))):makeMidSide2(fx3(in),degI):sdmx);
+//______________________________
+sequencer2 = \(fx,fx2,fx3,degI,mside,tSec,gainRev,in).
+    ( in <: (fx,_ : fx2 : ba.selectxbus(1,6, ma.SR/20,fx3(in))):mside(fx3(in),degI): _, combApf(tSec,gainRev) : sdmx);
+//______________________________
+chord2 = \(fx,fx2,degI,mside,tSec,gainRev,in).
+    (in <: (fx,in : fx2 : par(i,6,mside(i,degI)):> si.bus(2) : _, combApf(tSec,gainRev): sdmx));
+//______________________________
+chord1 = \(fx,fx2,degI,mside,in).
+    (in <: (fx,in : fx2 : par(i,6,mside(i,degI)):> si.bus(2) : sdmx));
+//dflApf(t,g)
+//dflApf(t,g) = ((+ : @(t-1) :apfSeries(t,g,5)) ~ *(g)) : mem;
+g = 1/sqrt(2); // il massimo della quadratura tra i coefficienti allpass si ottiene con 1/sqrt(2)
+t= ba.sec2samp(.07);
+
+
+
+
+
+// ---------
+// FUNZIONI CHIAMATI NEL PROCESS PER IL ROUTING
+routingEnv(i1,i2,i3,i4,i5,i6,e1,e2,e3,e4,e5,e6) = i1*e1,i2*e2,i3*e3,i4*e4,i5*e5,i6*e6;
+sentiloSullaIde = par(i,2,*(checkbox("[0]input"))), par(i,2,*(checkbox("1"))),par(i,2,*(checkbox("2")));
+lrsomma = \(l1,r1,l2,r2).(l1+l2,r1+r2);
+// ---------
+xAscoltare(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14) = (a3+a5+a7+a9+a11+a13)/4,(a4+a6+a8+a10+a12+a14)/4;
+spegnimi = par(i,2,*(0));
+// ---------
+
+
+
+
+
+
+
+//_____________________ Luca Spanedda LIBRARY __________________________
+//
+// binary selector
+selector(sel, x, y) = x * (1 - sel) + y * (sel);
+// a classic sample and hold
+sah(x, t) = selector(t, _, x) ~ _;
+// random number generator
+random(range, seed, t) = ((noise(seed) : abs), t) : sah * range;
+//dirac
+dirac = 1-1';
+// first derivate
+derivate(x) = x < x';
+// pseudo-random noise with linear congruential generator (LCG)
+noise(initSeed) = lcg ~ _ : (_ / m)
+with{
+    a = 18446744073709551557; c = 12345; m = 2 ^ 31; 
+    lcg(seed) = ((a * seed + c) + (initSeed - initSeed') % m);
+};
+// sample and hold with internal trigger
+sahSinc(f, x) = (x, pulseTrain(f)) : sah;
+pulseTrain(f) = phasor0(f) : derivate + dirac;
+// sah noise
+sahNoise(f, seed) = sahSinc(f, noise(seed));
+// phasor that start from 0
+phasor0(f) = (_ <: _ + f, _) ~  _ % ma.SR : (!, _ / ma.SR);
+//
+//__________ LS LIBRARY __________________________________________________
