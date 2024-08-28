@@ -1,5 +1,5 @@
 # Variabili per le directory dei Makefile secondari
-CS ?= ritardando
+CS ?= accelerando
 CSOUND_DIR ?= csound_$(CS)
 AUDIO_PROCESSING_DIR := simulazioniFaust
 

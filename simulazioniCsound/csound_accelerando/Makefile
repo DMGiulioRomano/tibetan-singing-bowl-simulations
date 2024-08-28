@@ -1,7 +1,7 @@
 # Variabili
 ORC_FILE := 01orchestra.orc  # Specifica il tuo file .orc
 SCO_FILES := $(wildcard *.sco)  # Trova tutti i file .sco nella directory corrente
-OUTPUT_PATH := /Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando
+OUTPUT_PATH := ../accelerando
 
 # Genera l'elenco dei file di output .wav
 OUTPUT_FILES := $(foreach file,$(SCO_FILES),$(OUTPUT_PATH)/$(basename $(file)).wav)
