@@ -98,7 +98,7 @@ volumePlus = nentry("vol",1,1,9,0.1):si.smoo;
 //
 // process multiCanale per Export
 //------------                          freqList = (713,1844,3284,4946,6788,7744);
-/*
+
 process = + <:  si.bus(2),
                ( (sequencer2(mappingQfilter6(1.5),impulseFbkBank2(fDev3,.8,0.01,0.5),chooser(732),56,makeMidSide5,6,.3),
                     sequencer2(mappingQfilter6(1.5),noiseFbkBank2(fDev2,.8,.02,0.43),chooser(712),-60,makeMidSide5,6,.3) : lrsomma:  par(i,2,de.sdelay(ma.SR*3,ma.SR/20,ma.SR*2.63))),
@@ -109,7 +109,7 @@ process = + <:  si.bus(2),
                 (sequencer2(mappingQfilter3(1.7),impulseFbkBank3(7000,fDev3,.3,0.003,0.4),chooser(432),137,makeMidSide5,6,.36),
                     sequencer2(mappingQfilter6(1.5),noiseFbkBank3(7000,fDev2,.3,1,0.4),chooser(412),-150,makeMidSide5,6,.36) : lrsomma:  par(i,2,de.sdelay(ma.SR*2,ma.SR/20,ma.SR*.7))) <: si.bus(8) , par(i,8,de.delay(ma.SR*12,ma.SR*12)) :> si.bus(8));
 
-*/
+
 // process multiCanale per ascolto sulla Ide
 /*
 process = + <:  _*.3,_*.3,
@@ -195,10 +195,10 @@ process = + <:  (si.bus(2):par(i,2,*(0.2))),
 */
 // process multiCanale per ascolto sulla Ide
 
-
+/*
 main(peakenv, rms,freqPicchi) = _ <: (si.bus(2):par(i,2,*(0.2))),
                 ((chord2(mappingQfilter5(1.5),impulseFbkBank2(fDev2,.1,0.01,0.1),2,makeMidSide2,1,.4): par(i,2,_<: _*((freqPicchi/3))+_*(rms*15))),
-                    (chord2(mappingQfilter5(1.5),impulseFbkBank2(fDev2,.8+.2*(1-peakenv),.09,.26),-1,makeMidSide4,4,.4):par(i,2,*(1-rms*2.5))):lrsomma /*:par(i,2,de.delay(ma.SR*2,ma.SR*1.2))*/),
+                    (chord2(mappingQfilter5(1.5),impulseFbkBank2(fDev2,.8+.2*(1-peakenv),.09,.26),-1,makeMidSide4,4,.4):par(i,2,*(1-rms*2.5))):lrsomma ),
                 ((sequencer2(mappingQfilter5(1.5),impulseFbkBank2(fDev,.6+.2*(peakenv),0.012,.15),chooser(4728),1,makeMidSide4,4,.4):par(i,2,*(1-rms*2.5))),
                     (chord2(mappingQfilter3(1.5),impulseFbkBank2(fDev,.129,0.1,.1),-1,makeMidSide2,.2,.6): par(i,2,_<: _*((freqPicchi/3))+_*(rms*15))) :lrsomma):
                      par(i,2,*(checkbox("[0]input")):*(volumePlus)), par(i,2,*(checkbox("1")):*(volumePlus)),par(i,2,*(checkbox("2")):*(volumePlus)):>  si.bus(2);
@@ -206,7 +206,7 @@ main(peakenv, rms,freqPicchi) = _ <: (si.bus(2):par(i,2,*(0.2))),
 
 process = + <: peakenvelope(0.2), rmsInputVis(0.01), frequenzaPicchi(timePeak,pkTresh,3,2), _ : main;
 volumePlus = nentry("vol",1,1,9,0.1):si.smoo;
-
+*/
 //bal = hslider("m-s", 0.5, 0, 1, 0.01):*(90):si.smoo;
 //balance(m,s) = m * cos(bal), s * sin(bal);
 // : sdmx : balance : par(i,2,*(2)) : sdmx
