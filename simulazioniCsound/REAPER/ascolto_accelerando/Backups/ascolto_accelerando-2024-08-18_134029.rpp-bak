@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "7.01/macOS-arm64" 1724942363
+<REAPER_PROJECT 0.1 "7.01/macOS-arm64" 1723981229
   <NOTES 0 2
   >
   RIPPLE 0
@@ -16,9 +16,9 @@
   TIMEMODE 1 5 -1 30 0 0 -1
   VIDEO_CONFIG 0 0 256
   PANMODE 3
-  CURSOR 8
-  ZOOM 10.22646858446217 25 0
-  VZOOMEX 0 336
+  CURSOR 80
+  ZOOM 5.31089952898855 0 0
+  VZOOMEX 0 1573
   USE_REC_CFG 0
   RECMODE 1
   SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
@@ -60,8 +60,8 @@
   GLOBAL_AUTO -1
   TEMPO 120 4 4
   PLAYRATE 1 0 0.25 4
-  SELECTION 7 7
-  SELECTION2 7 7
+  SELECTION 0 0
+  SELECTION2 0 0
   MASTERAUTOMODE 0
   MASTERTRACKHEIGHT 0 0
   MASTERPEAKCOL 16576
@@ -114,7 +114,7 @@
     VU 2
     TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 2
+    NCHAN 6
     FX 1
     TRACKID {33DE08C6-2861-154C-B7A8-C937B0E97695}
     PERF 0
@@ -144,28 +144,29 @@
     FX 1
     TRACKID {F8A90D58-347C-7B46-9EB7-7E933300BF20}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666667
+      LENGTH 14.43633333333333
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {8AE75D90-68AA-FD40-AFA0-2557C629A9AF}
-      IID 5
-      NAME ritardando_bloccatoApugnoCapovolto.wav
+      IGUID {92F5D8ED-4560-AF4B-BE65-6F9AC82264C8}
+      IID 7
+      NAME accelerando_bloccatoApugnoCapovolto.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {56CEA293-7414-6B49-BB80-B9FBE6A6F8B2}
+      GUID {11FEEE8B-56BE-D64B-82BF-FC6FD9FEF953}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_bloccatoApugnoCapovolto.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_bloccatoApugnoCapovolto.wav"
       >
     >
   >
@@ -274,28 +275,29 @@
     FX 1
     TRACKID {07676B8C-FB51-4F4A-AAA0-BE775C364A6D}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 17.59533333333333
+      LENGTH 14.43633333333333
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {114AE972-1A78-6047-A5F7-74FD58893607}
-      IID 6
-      NAME ritardando_bloccatoApugnoCapovoltoAlCentro.wav
+      IGUID {25DC2865-1A20-7E46-A788-3BE97AD26D50}
+      IID 8
+      NAME accelerando_bloccatoApugnoCapovoltoAlCentro.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {69278E03-0148-0249-B973-E2D74FD1AE2C}
+      GUID {4F80F365-7FEB-1044-AA74-B13A6DB06C59}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_bloccatoApugnoCapovoltoAlCentro.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_bloccatoApugnoCapovoltoAlCentro.wav"
       >
     >
   >
@@ -393,34 +395,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 1 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {5CAF9F8C-7D83-6E4C-B9D1-C34B207BC882}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 17.59533333333333
+      LENGTH 14.43633333333334
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {BC292BED-33E0-0141-89F5-A15B7723A411}
-      IID 7
-      NAME ritardando_bloccatoApugnoCapovoltoEsterno.wav
+      IGUID {A6A7F7B4-1459-2E45-BAE1-FCA58B503463}
+      IID 9
+      NAME accelerando_bloccatoApugnoCapovoltoEsterno.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {A7410DDF-5DB2-F649-B144-319CED5B1E55}
+      GUID {89993765-8550-5D4C-911B-87FF2AB7E8C3}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_bloccatoApugnoCapovoltoEsterno.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_bloccatoApugnoCapovoltoEsterno.wav"
       >
     >
   >
@@ -518,34 +521,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 1 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {21FE3F1C-948C-AA44-A367-87C72CF8062C}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 17.59533333333333
+      LENGTH 14.43633333333334
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {75F43390-4A66-DD40-B152-A94806D9125D}
-      IID 8
-      NAME ritardando_bloccatoApugnoDalBasso.wav
+      IGUID {60D27EF9-A59E-2D4A-A945-E0E69416F333}
+      IID 10
+      NAME accelerando_bloccatoApugnoDalBasso.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {590BB654-C0C9-CB44-8AD7-3DECB0F1C861}
+      GUID {0C48C38C-9766-E84C-92AA-F2AD89FB6490}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_bloccatoApugnoDalBasso.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_bloccatoApugnoDalBasso.wav"
       >
     >
   >
@@ -649,28 +653,29 @@
     FX 1
     TRACKID {C2789C47-05D9-254D-83D5-298E142DCFD4}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 17.59533333333333
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {80937DB7-BA1A-9F4B-B8A5-F1FC49D8DF18}
-      IID 9
-      NAME ritardando_bloccatoApugnoDallAlto.wav
+      IGUID {0699E6B2-3183-7448-B386-12A64D6BFD47}
+      IID 11
+      NAME accelerando_bloccatoApugnoDallAlto.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {7757F568-7BE6-DE4B-9A14-6D03EB5F3F1A}
+      GUID {F7BADCA8-962F-024C-AD8B-4C3D7339DDF9}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_bloccatoApugnoDallAlto.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_bloccatoApugnoDallAlto.wav"
       >
     >
   >
@@ -774,28 +779,29 @@
     FX 1
     TRACKID {27B1B2AB-9C57-2C43-85D3-0C697E63C97C}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 17.59533333333333
+      LENGTH 14.43633333333334
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {1ACF68C3-D3BB-7C42-AFFD-91D929D8FD85}
-      IID 10
-      NAME ritardando_bloccatoApugnoSullaPancia.wav
+      IGUID {94505D47-F22E-E840-AACB-2DE91C4BE385}
+      IID 12
+      NAME accelerando_bloccatoApugnoSullaPancia.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {53882518-2278-F04E-BD25-16EE6890FD0E}
+      GUID {AF22F9BE-6360-4747-98C1-A04F12BAC1F4}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_bloccatoApugnoSullaPancia.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_bloccatoApugnoSullaPancia.wav"
       >
     >
   >
@@ -920,34 +926,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {E5D10D6A-7C89-7745-9008-9E3DB8E86B28}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 17.59533333333333
+      LENGTH 14.43633333333334
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {D4DB6410-775C-1242-978F-0E66E4A24E42}
-      IID 11
-      NAME ritardando_capovoltoAlCentro_ditaAperte.wav
+      IGUID {5440A1DE-0003-5541-AFA8-CB0B8B734C2C}
+      IID 13
+      NAME accelerando_capovoltoAlCentro_ditaAperte.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {E73B2500-E363-E34E-A38F-9E053D7AA058}
+      GUID {9A9E333C-A93E-744C-9BFE-2CBFAE7B19D8}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_capovoltoAlCentro_ditaAperte.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_capovoltoAlCentro_ditaAperte.wav"
       >
     >
   >
@@ -967,7 +974,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -993,7 +1000,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1019,7 +1026,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1045,34 +1052,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {585D4965-CD1C-6744-897F-4376D24938CA}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 17.59533333333335
+      LENGTH 14.43633333333334
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {A73F3C4D-1051-5748-A26B-68D424293605}
-      IID 12
-      NAME ritardando_capovoltoAlCentro.wav
+      IGUID {9A0FDC0F-8A8F-CC4A-89D9-D754ED0C9018}
+      IID 14
+      NAME accelerando_capovoltoAlCentro.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {7E76B776-C030-C04A-8E3D-F30779D708BE}
+      GUID {3C5AD07E-E7DE-0D44-8F7D-8B462BAC2A69}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_capovoltoAlCentro.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_capovoltoAlCentro.wav"
       >
     >
   >
@@ -1092,7 +1100,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1118,7 +1126,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1144,7 +1152,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1197,34 +1205,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {B7D1407F-E7BB-B345-9E52-2B5631C4830F}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666668
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {32A480B1-5ED8-9648-B0ED-25023D398BFF}
-      IID 13
-      NAME ritardando_daDentro.wav
+      IGUID {A2FBD832-3325-F449-834B-5280E9091155}
+      IID 15
+      NAME accelerando_daDentro.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {DC523524-602F-C94D-9AFC-9DA2DF81001C}
+      GUID {FFB651A5-F7B6-2641-BA66-882C5C41A119}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_daDentro.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_daDentro.wav"
       >
     >
   >
@@ -1233,7 +1242,7 @@
     PEAKCOL 20942776
     BEAT -1
     AUTOMODE 0
-    VOLPAN 0.25299573854665 0 -1 -1 1
+    VOLPAN 0.20663638006368 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -1244,7 +1253,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1270,7 +1279,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1296,7 +1305,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1322,34 +1331,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {1EB58A4E-2D6A-AD44-938C-A199D1282D8A}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666668
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {42311106-1286-0B47-87A4-DAD8191AE9FF}
-      IID 14
-      NAME ritardando_dalBasso.wav
+      IGUID {CD060AAC-9C83-6B41-A938-EEB1D551F6D1}
+      IID 16
+      NAME accelerando_dalBasso.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {EAEAA941-B790-CC49-97DA-36747E5D0E90}
+      GUID {893B3365-6774-C544-A8BF-756F9DF70714}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_dalBasso.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_dalBasso.wav"
       >
     >
   >
@@ -1369,7 +1379,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1395,7 +1405,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1421,7 +1431,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1436,7 +1446,7 @@
     PEAKCOL 26852627
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1 0 -1 -1 1
+    VOLPAN 3.98107170553497 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -1447,34 +1457,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 183 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {CC6D7694-9214-2546-8B98-5726AE9A2749}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666668
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {5245280F-3ADB-F84F-989B-11A16395A9F7}
-      IID 16
-      NAME ritardando_dalBassoLegno.wav
+      IGUID {EC785DFE-DEB7-B249-A777-036AE06117E4}
+      IID 18
+      NAME accelerando_dalBassoLegno.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {B9378B16-3D20-814D-8C5D-39386DB12BE3}
+      GUID {56B3068E-EF70-FB4B-9EBA-C8C8CC816754}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_dalBassoLegno.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_dalBassoLegno.wav"
       >
     >
   >
@@ -1494,7 +1505,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1520,7 +1531,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1546,7 +1557,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1561,7 +1572,7 @@
     PEAKCOL 26852627
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1 0 -1 -1 1
+    VOLPAN 2.5089530007981 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -1572,34 +1583,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 287 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {D264C5F3-212C-B441-86E3-0495939F52F7}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666668
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {D696EEB5-40F8-034D-B5BA-6819723C3993}
-      IID 17
-      NAME ritardando_dallAlto.wav
+      IGUID {9450E061-D35A-7B46-AE5E-5712AE3BB5E2}
+      IID 19
+      NAME accelerando_dallAlto.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {17BBA6FE-5F4A-4342-95D3-F62C2AD05F7D}
+      GUID {70D8221D-973C-5D49-BB02-CC95699398D6}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_dallAlto.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_dallAlto.wav"
       >
     >
   >
@@ -1619,7 +1631,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1634,7 +1646,7 @@
     PEAKCOL 20942776
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1 0 -1 -1 1
+    VOLPAN 1 1 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -1645,7 +1657,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1676,7 +1688,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1691,7 +1703,7 @@
     PEAKCOL 26852627
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1 0 -1 -1 1
+    VOLPAN 1.02027317611641 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -1702,34 +1714,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 195 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {79366FFA-FC2C-7943-A865-43B49490FF2A}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.33166666666664
+      LENGTH 14.72
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {CE26BD3B-6D89-254C-A70D-E303E27D1432}
-      IID 19
-      NAME ritardando_dallAltoLegno.wav
+      IGUID {AA9F345F-DDDF-7E46-84D9-14ECF66A01A6}
+      IID 21
+      NAME accelerando_dallAltoLegno.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {1A236668-8286-9A44-BC58-8EEAC2757FD9}
+      GUID {7EE4DF5E-CF2E-8C47-8440-994BD65FAE55}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_dallAltoLegno.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_dallAltoLegno.wav"
       >
     >
   >
@@ -1749,7 +1762,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1775,7 +1788,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1801,7 +1814,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1816,7 +1829,7 @@
     PEAKCOL 26852627
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1 0 -1 -1 1
+    VOLPAN 3.98107170553497 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -1827,34 +1840,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 153 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {213E2301-950C-764E-B9A1-2E1676EA04F8}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666668
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {CD7621B2-114D-EB4A-AAB3-E0A39603375C}
-      IID 21
-      NAME ritardando_sullaPancia.wav
+      IGUID {FDF62879-6BFF-0F40-B801-14E75AD3F661}
+      IID 23
+      NAME accelerando_sullaPancia.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {8C20033C-28F5-1648-A626-06FFCA161A9F}
+      GUID {BBD6C8F7-3D99-D645-8D60-A9D1A6F17240}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_sullaPancia.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_sullaPancia.wav"
       >
     >
   >
@@ -1874,7 +1888,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1900,7 +1914,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1926,7 +1940,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -1941,7 +1955,7 @@
     PEAKCOL 26852627
     BEAT -1
     AUTOMODE 0
-    VOLPAN 0.54793648037502 0 -1 -1 1
+    VOLPAN 2.65527416923744 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -1952,34 +1966,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 131 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {3DEFBBEF-7BA9-E344-8873-D1460860BFDE}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666668
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {5A24EA14-1421-514E-A7D2-1A44376A13A0}
-      IID 23
-      NAME ritardando_sullaPanciaLegno.wav
+      IGUID {1EDF5526-70CC-1746-B081-07895386E476}
+      IID 25
+      NAME accelerando_sullaPanciaLegno.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {8A9EC354-CCDC-6B45-A5FC-01B6038B6ECA}
+      GUID {DB063A2F-FB96-5840-ADB8-42620894C715}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_sullaPanciaLegno.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_sullaPanciaLegno.wav"
       >
     >
   >
@@ -1988,7 +2003,7 @@
     PEAKCOL 20942776
     BEAT -1
     AUTOMODE 0
-    VOLPAN 0.25299573854665 0 -1 -1 1
+    VOLPAN 0.20079148705394 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -1999,7 +2014,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2014,7 +2029,7 @@
     PEAKCOL 20942776
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1 0 -1 -1 1
+    VOLPAN 0.72056191779384 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -2025,7 +2040,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2040,7 +2055,7 @@
     PEAKCOL 20942776
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1 0 -1 -1 1
+    VOLPAN 0.60115247317422 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -2051,7 +2066,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2084,7 +2099,7 @@
     FX 1
     TRACKID {95D69931-6AD2-5C4D-8F3A-6AA43D28A1B7}
     PERF 0
-    LAYOUTS C ""
+    LAYOUTS 200%_C ""
     MIDIOUT -1
     MAINSEND 1 0
   >
@@ -2104,62 +2119,37 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 1 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {7CA756E0-D969-084C-B040-F00DA74DAC40}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666668
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {64C2AECC-18E0-564C-B2FB-EC6ED367132A}
-      IID 15
-      NAME ritardando_dalBassoBloccato.wav
+      IGUID {59F636EF-1B96-CA41-BA9A-3F7E0BF020BC}
+      IID 17
+      NAME accelerando_dalBassoBloccato.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {253FE815-8FCC-F94E-8C87-5DCE2B230CBF}
+      GUID {4E76FB56-5FAD-1647-937C-5725E4D5210A}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_dalBassoBloccato.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_dalBassoBloccato.wav"
       >
     >
-  >
-  <TRACK {215AE725-0D84-C248-B89F-472F9EE1DC24}
-    NAME direct
-    PEAKCOL 20942776
-    BEAT -1
-    AUTOMODE 0
-    VOLPAN 0.25299573854665 0 -1 -1 1
-    MUTESOLO 0 0 0
-    IPHASE 0
-    PLAYOFFS 0 1
-    ISBUS 0 0
-    BUSCOMP 0 0 0 0 0
-    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
-    FIXEDLANES 9 0 0
-    SEL 0
-    REC 0 0 1 0 0 0 0 0
-    VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
-    INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 6
-    FX 1
-    TRACKID {215AE725-0D84-C248-B89F-472F9EE1DC24}
-    PERF 0
-    AUXRECV 64 0 1 0 0 0 0 0 0 -1:U 0 -1 ''
-    MIDIOUT -1
-    MAINSEND 1 0
   >
   <TRACK {AD29968B-73FB-CC49-90F7-E30D9D276910}
     NAME ""
@@ -2177,7 +2167,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2203,13 +2193,39 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {B31B5EFF-8167-994E-8A7E-9871C617B515}
     PERF 0
     AUXRECV 64 0 1 0 0 0 0 4 0 -1:U 0 -1 ''
+    MIDIOUT -1
+    MAINSEND 1 0
+  >
+  <TRACK {215AE725-0D84-C248-B89F-472F9EE1DC24}
+    NAME direct
+    PEAKCOL 20942776
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.25299573854665 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 1 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 6
+    FX 1
+    TRACKID {215AE725-0D84-C248-B89F-472F9EE1DC24}
+    PERF 0
+    AUXRECV 64 0 1 0 0 0 0 0 0 -1:U 0 -1 ''
     MIDIOUT -1
     MAINSEND 1 0
   >
@@ -2229,34 +2245,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {C38FFAA4-7D18-2542-82D1-156BD38FCF42}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666668
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {4984F8E2-06BB-C748-8DB2-3168A15210C1}
-      IID 18
-      NAME ritardando_dallAltoBloccato.wav
+      IGUID {0E91E42B-8C9A-EC4F-8B8B-AF1F701C78BC}
+      IID 20
+      NAME accelerando_dallAltoBloccato.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {A4759307-5DD2-CD45-839D-3A9FD5592756}
+      GUID {0971C9DD-40AA-6446-A4E4-FA68234EABBE}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_dallAltoBloccato.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_dallAltoBloccato.wav"
       >
     >
   >
@@ -2276,7 +2293,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2302,7 +2319,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2328,7 +2345,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2354,34 +2371,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {FD776778-7FF9-7E4D-9BD7-8F7F5AD1B687}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 17.59533333333333
+      LENGTH 14.44466666666668
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {218E8FEE-A3E3-0640-A726-287C310CA51D}
-      IID 20
-      NAME ritardando_dentroAlCentro.wav
+      IGUID {2193C685-1992-FC4D-A60B-7269AEF192D5}
+      IID 22
+      NAME accelerando_dentroAlCentro.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {C29F9CC9-BD71-C34E-987C-B614BB9074F9}
+      GUID {DFBFEBD2-808F-C54F-9C3C-34F30289384C}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_dentroAlCentro.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_dentroAlCentro.wav"
       >
     >
   >
@@ -2401,7 +2419,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2427,7 +2445,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2453,7 +2471,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2468,7 +2486,7 @@
     PEAKCOL 26852627
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1 0 -1 -1 1
+    VOLPAN 3.98107170553497 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -2479,34 +2497,35 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 142 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {3BCFC0D8-5F68-F84B-A16C-15E09A4E6FDB}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 18.18166666666668
+      LENGTH 14.43633333333336
       LOOP 1
       ALLTAKES 0
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {668A7196-E8E5-7141-ADD1-C2827B351A75}
-      IID 22
-      NAME ritardando_sullaPanciaBloccato.wav
+      IGUID {A5401730-2885-E14F-A0CD-0603C2E0CB52}
+      IID 24
+      NAME accelerando_sullaPanciaBloccato.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {6101EE5D-0F07-9F45-AB2E-B48710C61D10}
+      GUID {324902CB-E49B-2349-93D7-74375E2ACBDE}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_sullaPanciaBloccato.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_sullaPanciaBloccato.wav"
       >
     >
   >
@@ -2526,7 +2545,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2552,7 +2571,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2578,7 +2597,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 0 0 0 0 0 0
+    TRACKHEIGHT 0 1 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2598,7 +2617,7 @@
     IPHASE 0
     PLAYOFFS 0 1
     ISBUS 1 1
-    BUSCOMP 2 0 0 0 0
+    BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0
     SEL 0
@@ -2607,7 +2626,7 @@
     SPACER 1
     TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 6
+    NCHAN 2
     FX 1
     TRACKID {AE46F16F-8E8E-FF49-BB6B-86E49AE5F97C}
     PERF 0
@@ -2631,12 +2650,13 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 112 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {63B60CF5-6357-1346-9BF8-EAD2574144BA}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
@@ -2648,17 +2668,17 @@
       FADEIN 5 0 0 5 0 0 0
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
-      SEL 1
-      IGUID {CA6A52BC-7952-464B-B3DB-CFA42DCDEE5E}
-      IID 36
-      NAME ritardando_capovoltoStrofinatoLegno_ditaaperte.wav
+      SEL 0
+      IGUID {7004D91A-E89B-9446-A7CB-A5FCA7E98066}
+      IID 32
+      NAME accelerando_capovoltoStrofinatoLegno_ditaaperte.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {8D6C024F-79EE-1441-B620-46E7679F14FD}
+      GUID {3AB44738-B855-C94D-8732-ABA512D0441D}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_capovoltoStrofinatoLegno_ditaaperte.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_capovoltoStrofinatoLegno_ditaaperte.wav"
       >
     >
   >
@@ -2678,7 +2698,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2704,7 +2724,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2730,7 +2750,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2756,12 +2776,13 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 189 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {F1485F33-DE4C-674A-875A-853AE1A9374F}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
@@ -2774,16 +2795,16 @@
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {4830B73E-9DF1-0C42-A025-46C7BE6ACDDA}
-      IID 37
-      NAME ritardando_capovoltoStrofinatoLegno.wav
+      IGUID {5FB423D9-654B-8A4A-9D21-2C852ED99240}
+      IID 33
+      NAME accelerando_capovoltoStrofinatoLegno.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {E18E2035-0D31-394F-AF52-2EDEF116CAF5}
+      GUID {6B33A857-BE10-234F-8DC2-73A70209E5CB}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_capovoltoStrofinatoLegno.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_capovoltoStrofinatoLegno.wav"
       >
     >
   >
@@ -2792,7 +2813,7 @@
     PEAKCOL 20942776
     BEAT -1
     AUTOMODE 0
-    VOLPAN 0.23783287923456 0 -1 -1 1
+    VOLPAN 0.1880988229377 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -2803,7 +2824,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2829,7 +2850,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2855,7 +2876,7 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
@@ -2870,7 +2891,7 @@
     PEAKCOL 26852627
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1.28351656094823 0 -1 -1 1
+    VOLPAN 1 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -2879,14 +2900,15 @@
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
     FIXEDLANES 9 0 0
     SEL 0
-    REC 0 0 1 0 0 0 0 0
+    REC 0 0 0 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 341 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
     NCHAN 6
     FX 1
     TRACKID {C1EF8493-712B-6B4E-A541-A4037321F62C}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
@@ -2899,16 +2921,16 @@
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {A1368AA5-DA58-9B49-AD8C-2C54558196E8}
-      IID 38
-      NAME ritardando_strofinato.wav
+      IGUID {117B7530-664D-224B-A146-2201F0A1D73F}
+      IID 34
+      NAME accelerando_strofinato.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {0248C681-645D-9A43-8FC3-CEBAE6E01D5B}
+      GUID {EC8A2F6D-3E29-4C42-8E8A-D8B80FA7C3A1}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_strofinato.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_strofinato.wav"
       >
     >
   >
@@ -2928,9 +2950,9 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 6
+    NCHAN 8
     FX 1
     TRACKID {16758756-B116-AE46-A531-32D6ADA6ACB5}
     PERF 0
@@ -2954,9 +2976,9 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 6
+    NCHAN 8
     FX 1
     TRACKID {0D397597-F5F1-1A48-B5C9-D431F167A2B0}
     PERF 0
@@ -2980,9 +3002,9 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 6
+    NCHAN 8
     FX 1
     TRACKID {486DF9CF-1DD7-EE4F-83FC-66889C2F7B76}
     PERF 0
@@ -2995,7 +3017,7 @@
     PEAKCOL 26852627
     BEAT -1
     AUTOMODE 0
-    VOLPAN 1.57217646449854 0 -1 -1 1
+    VOLPAN 1 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -3006,12 +3028,13 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 143 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 6
+    NCHAN 8
     FX 1
     TRACKID {941ED4D6-0E34-994C-8A36-8B4481B1E6CA}
     PERF 0
+    LAYOUTS 200%_A ""
     MIDIOUT -1
     MAINSEND 0 0
     <ITEM
@@ -3024,16 +3047,16 @@
       FADEOUT 5 0 0 5 0 0 0
       MUTE 0 0
       SEL 0
-      IGUID {52B77DE3-65E8-F649-B9A5-A6D296594DAE}
-      IID 39
-      NAME ritardando_strofinatoLegno.wav
+      IGUID {6866FEF0-39ED-5446-9508-6512BE933038}
+      IID 35
+      NAME accelerando_strofinatoLegno.wav
       VOLPAN 1 0 1 -1
       SOFFS 0
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
-      GUID {0B38CF47-B078-7F4C-99BC-A56327D72D9B}
+      GUID {7A94B618-E688-A447-88B4-449F8205C33F}
       <SOURCE WAVE
-        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/ritardando_strofinatoLegno.wav"
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_strofinatoLegno.wav"
       >
     >
   >
@@ -3042,7 +3065,7 @@
     PEAKCOL 20942776
     BEAT -1
     AUTOMODE 0
-    VOLPAN 0.25299573854665 0 -1 -1 1
+    VOLPAN 0.23783287923456 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -3053,9 +3076,9 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 6
+    NCHAN 8
     FX 1
     TRACKID {EA57EDB0-7307-1F4D-B3C3-353771613CFD}
     PERF 0
@@ -3079,9 +3102,9 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 6
+    NCHAN 8
     FX 1
     TRACKID {D7FA8447-D1D9-C44A-A70D-4845B73AFB87}
     PERF 0
@@ -3105,13 +3128,213 @@
     SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
-    TRACKHEIGHT 0 1 0 0 0 0 0
+    TRACKHEIGHT 0 0 0 0 0 0 0
     INQ 0 0 0 0.5 100 0 0 100
-    NCHAN 6
+    NCHAN 8
     FX 1
     TRACKID {781C58C7-F61F-B748-B7DA-3A8C826E07CB}
     PERF 0
     AUXRECV 93 0 1 0 0 0 0 4 0 -1:U 0 -1 ''
+    MIDIOUT -1
+    MAINSEND 1 0
+  >
+  <TRACK {4E3C62E5-9317-124D-A686-ECE1F7CBD5A4}
+    NAME accelerando_90-strofinato
+    PEAKCOL 26852627
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 2 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 3
+    FIXEDLANES 9 0 0
+    SEL 1
+    REC 0 0 0 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 355 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 10
+    FX 1
+    TRACKID {4E3C62E5-9317-124D-A686-ECE1F7CBD5A4}
+    PERF 0
+    LAYOUTS 200%_A ""
+    MIDIOUT -1
+    MAINSEND 0 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 69.8256875
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0 0 5 0 0 0
+      FADEOUT 5 0 0 5 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {0E85C9CC-1A0A-174A-BA66-B2E3FA8C2969}
+      IID 41
+      NAME accelerando_strofinatoAlternando.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4CDE0FA0-7A27-8E40-957B-089BE250A13E}
+      <SOURCE WAVE
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_strofinatoAlternando.wav"
+      >
+    >
+    <ITEM
+      POSITION 80
+      SNAPOFFS 0
+      LENGTH 89.8256875
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 5 0 0 5 0 0 0
+      FADEOUT 5 0 0 5 0 0 0
+      MUTE 0 0
+      SEL 1
+      IGUID {B9F38B5E-4FD4-D14E-8EF7-45837E631EA8}
+      IID 44
+      NAME accelerando_accelerando_feltro-legno_impulsi.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {D447FA67-F8FE-0747-8BD9-E8323083A03E}
+      <SOURCE WAVE
+        FILE "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/simulazioniFaust/output/accelerando_accelerando_feltro-legno_impulsi.wav"
+      >
+    >
+  >
+  <TRACK {0E6DE934-DBD8-EA46-A0E1-2E78B58B7CD8}
+    NAME direct
+    PEAKCOL 20942776
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.23783287923456 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 6
+    FX 1
+    TRACKID {0E6DE934-DBD8-EA46-A0E1-2E78B58B7CD8}
+    PERF 0
+    AUXRECV 97 0 1 0 0 0 0 0 0 -1:U 0 -1 ''
+    MIDIOUT -1
+    MAINSEND 1 0
+  >
+  <TRACK {0E47523D-84F9-C94C-9215-92C9209DBE52}
+    NAME ""
+    PEAKCOL 20942776
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 6
+    FX 1
+    TRACKID {0E47523D-84F9-C94C-9215-92C9209DBE52}
+    PERF 0
+    AUXRECV 97 0 1 0 0 0 0 2 0 -1:U 0 -1 ''
+    MIDIOUT -1
+    MAINSEND 1 0
+  >
+  <TRACK {71AB365C-CE3C-6A49-86AF-18A51F433143}
+    NAME ""
+    PEAKCOL 20942776
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 6
+    FX 1
+    TRACKID {71AB365C-CE3C-6A49-86AF-18A51F433143}
+    PERF 0
+    AUXRECV 97 0 1 0 0 0 0 4 0 -1:U 0 -1 ''
+    MIDIOUT -1
+    MAINSEND 1 0
+  >
+  <TRACK {7B7A32F6-D840-EB45-A1CE-7343636950E3}
+    NAME ""
+    PEAKCOL 20942776
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 6
+    FX 1
+    TRACKID {7B7A32F6-D840-EB45-A1CE-7343636950E3}
+    PERF 0
+    AUXRECV 97 0 1 0 0 0 0 6 0 -1:U 0 -1 ''
+    MIDIOUT -1
+    MAINSEND 1 0
+  >
+  <TRACK {7BF5F77C-46C5-8346-BABC-351371A2D576}
+    NAME ""
+    PEAKCOL 20942776
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 1 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 0 0
+    FIXEDLANES 9 0 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 6
+    FX 1
+    TRACKID {7BF5F77C-46C5-8346-BABC-351371A2D576}
+    PERF 0
+    AUXRECV 97 0 1 0 0 0 0 8 0 -1:U 0 -1 ''
     MIDIOUT -1
     MAINSEND 1 0
   >

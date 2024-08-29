@@ -3,7 +3,7 @@
 #define MIN_VALUE_TIME#0.022#
 #define COUNTER2#10#
 #define ERROR(value'percent)#($value + ($value * ($percent / 100) ) * ((0 + ~ *(100))/100))#
-#define PATH#"/Users/giuliodemattia/Documents/campana/catalogo/rec/dallAlto.wav"#
+#define PATH#"../../rec/dallAlto.wav"#
 //dallAlto
 t 0 $BPM
 { $COUNTER CNT

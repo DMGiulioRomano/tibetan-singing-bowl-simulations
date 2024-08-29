@@ -1,25 +1,25 @@
 <CsoundSynthesizer>
 <CsOptions>
 
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/dentroAlCentro.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/dallAlto.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/dallAltoLegno.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/dallAltoBloccato.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/dalBasso.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/dalBassoBloccato.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/dalBassoLegno.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/daDentro.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/sullaPancia.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/sullaPanciaBloccato.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/sullaPanciaLegno.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/bloccatoApugnoCapovolto.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/bloccatoApugnoCapovoltoAlCentro.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/bloccatoApugnoCapovoltoEsterno.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/bloccatoApugnoDallAlto.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/bloccatoApugnoDalBasso.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/bloccatoApugnoSullaPancia.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/capovoltoAlCentro.wav" -W
-//-o "/Users/giuliodemattia/Documents/campana/catalogo/simulazioniCsound/accelerando/capovoltoAlCentro_ditaAperte.wav" -W
+//-o "../../simulazioniCsound/accelerando/dentroAlCentro.wav" -W
+//-o "../../simulazioniCsound/accelerando/dallAlto.wav" -W
+//-o "../../simulazioniCsound/accelerando/dallAltoLegno.wav" -W
+//-o "../../simulazioniCsound/accelerando/dallAltoBloccato.wav" -W
+//-o "../../simulazioniCsound/accelerando/dalBasso.wav" -W
+//-o "../../simulazioniCsound/accelerando/dalBassoBloccato.wav" -W
+//-o "../../simulazioniCsound/accelerando/dalBassoLegno.wav" -W
+//-o "../../simulazioniCsound/accelerando/daDentro.wav" -W
+//-o "../../simulazioniCsound/accelerando/sullaPancia.wav" -W
+//-o "../../simulazioniCsound/accelerando/sullaPanciaBloccato.wav" -W
+//-o "../../simulazioniCsound/accelerando/sullaPanciaLegno.wav" -W
+//-o "../../simulazioniCsound/accelerando/bloccatoApugnoCapovolto.wav" -W
+//-o "../../simulazioniCsound/accelerando/bloccatoApugnoCapovoltoAlCentro.wav" -W
+//-o "../../simulazioniCsound/accelerando/bloccatoApugnoCapovoltoEsterno.wav" -W
+//-o "../../simulazioniCsound/accelerando/bloccatoApugnoDallAlto.wav" -W
+//-o "../../simulazioniCsound/accelerando/bloccatoApugnoDalBasso.wav" -W
+//-o "../../simulazioniCsound/accelerando/bloccatoApugnoSullaPancia.wav" -W
+//-o "../../simulazioniCsound/accelerando/capovoltoAlCentro.wav" -W
+//-o "../../simulazioniCsound/accelerando/capovoltoAlCentro_ditaAperte.wav" -W
 -o "/Users/giuliodemattia/Desktop/prova.wav" -W
 
 
@@ -49,14 +49,14 @@ y
 //dentroAlCentro
 t 0 $BPM
 { $COUNTER CNT
-i1	[($MIN_VALUE_TIME * $COUNTER * $COUNTER) - $ERROR(($MIN_VALUE_TIME) * ($CNT. * $CNT.)'1)] .3 "/Users/giuliodemattia/Documents/campana/catalogo/rec/dentroAlCentro.wav" 5.55
+i1	[($MIN_VALUE_TIME * $COUNTER * $COUNTER) - $ERROR(($MIN_VALUE_TIME) * ($CNT. * $CNT.)'1)] .3 "../../rec/dentroAlCentro.wav" 5.55
 }
 { $COUNTER2 CNT
-i1  [($MIN_VALUE_TIME * $COUNTER * $COUNTER) + $ERROR([($MIN_VALUE_TIME*10) * $CNT. ]'3)] .3 "/Users/giuliodemattia/Documents/campana/catalogo/rec/dentroAlCentro.wav" 5.55
+i1  [($MIN_VALUE_TIME * $COUNTER * $COUNTER) + $ERROR([($MIN_VALUE_TIME*10) * $CNT. ]'3)] .3 "../../rec/dentroAlCentro.wav" 5.55
 }
 */
 
-#define PATH#"/Users/giuliodemattia/Documents/campana/catalogo/rec/dallAlto.wav"#
+#define PATH#"../../rec/dallAlto.wav"#
 //dallAlto
 t 0 $BPM
 { $COUNTER CNT
@@ -68,7 +68,7 @@ i1	[($MIN_VALUE_TIME * $COUNTER * $COUNTER) - ($MIN_VALUE_TIME) * ($CNT. * $CNT.
 //dallAltoLegno
 t 0 120 
 { 15 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] 3 "/Users/giuliodemattia/Documents/campana/catalogo/dallAltoLegno.wav" 4.1
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] 3 "../../dallAltoLegno.wav" 4.1
 }
  */
 
@@ -76,7 +76,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] 3 "/Users/giuliodemattia/Documents
 //dallAltoBloccato
 t 0 120 
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "/Users/giuliodemattia/Documents/campana/catalogo/dallAltoBloccato.wav" 3.83
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "../../dallAltoBloccato.wav" 3.83
 }
 */
 
@@ -84,7 +84,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "
 //dalBasso
 t 0 120 
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "/Users/giuliodemattia/Documents/campana/catalogo/dalBasso.wav" 5.465
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "../../dalBasso.wav" 5.465
 }
 */
 
@@ -92,7 +92,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "
 //dalBassoBloccato
 t 0 120 
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "/Users/giuliodemattia/Documents/campana/catalogo/dalBassoBloccato.wav" 9.465
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "../../dalBassoBloccato.wav" 9.465
 }
 */
 
@@ -101,7 +101,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "
 //dalBassoLegno
 t 0 120 
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "/Users/giuliodemattia/Documents/campana/catalogo/dalBassoLegno.wav" 4.893
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "../../dalBassoLegno.wav" 4.893
 }
 */
 
@@ -110,7 +110,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "
 //daDentro
 t 0 120 
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "/Users/giuliodemattia/Documents/campana/catalogo/daDentro.wav" 3.45
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "../../daDentro.wav" 3.45
 }
  */
 
@@ -119,7 +119,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "
 //sullaPancia
 t 0 120 
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "/Users/giuliodemattia/Documents/campana/catalogo/sullaPancia.wav" 12.99
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "../../sullaPancia.wav" 12.99
 }
  */
 
@@ -128,7 +128,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "
 //sullaPanciaBloccato
 t 0 120 
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "/Users/giuliodemattia/Documents/campana/catalogo/sullaPanciaBloccato.wav" 6.2
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "../../sullaPanciaBloccato.wav" 6.2
 }
 */
 
@@ -137,7 +137,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "
 //sullaPanciaLegno
 t 0 120
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "/Users/giuliodemattia/Documents/campana/catalogo/sullaPanciaLegno.wav" 4.595
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "../../sullaPanciaLegno.wav" 4.595
 }
  */
 
@@ -164,7 +164,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "
 //bloccatoApugnoCapovolto
 t 0 120
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "/Users/giuliodemattia/Documents/campana/catalogo/bloccatoApugnoCapovolto.wav" 6.4
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "../../bloccatoApugnoCapovolto.wav" 6.4
 }
 */
 
@@ -173,7 +173,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] [00.50 + 0.05 * (2 * $CNT. + 1)] "
 //bloccatoApugnoCapovoltoAlCentro
 t 0 120
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Documents/campana/catalogo/bloccatoApugnoCapovoltoAlCentro.wav" 7.705
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "../../bloccatoApugnoCapovoltoAlCentro.wav" 7.705
 }
 */
 
@@ -183,7 +183,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Document
 //bloccatoApugnoCapovoltoEsterno
 t 0 120
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Documents/campana/catalogo/bloccatoApugnoCapovoltodalcentroAllesterno.wav" 11.74
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "../../bloccatoApugnoCapovoltodalcentroAllesterno.wav" 11.74
 }
 */
 
@@ -192,7 +192,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Document
 //bloccatoApugnoDallAlto
 t 0 120
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Documents/campana/catalogo/bloccatoApugnoDallAlto.wav" 3.6
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "../../bloccatoApugnoDallAlto.wav" 3.6
 }
 */
 
@@ -200,7 +200,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Document
 //bloccatoApugnoDalBasso
 t 0 120
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Documents/campana/catalogo/bloccatoApugnoDalBasso.wav" 7.62
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "../../bloccatoApugnoDalBasso.wav" 7.62
 }
 */
 
@@ -208,7 +208,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Document
 //bloccatoApugnoSullaPancia
 t 0 120
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Documents/campana/catalogo/bloccatoApugnoSullaPancia.wav" 5.45
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "../../bloccatoApugnoSullaPancia.wav" 5.45
 }
 */
 
@@ -231,7 +231,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Document
 //CapovoltoAlCentro
 t 0 120
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Documents/campana/catalogo/CapovoltoAlCentro.wav" 15
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "../../CapovoltoAlCentro.wav" 15
 }
 */
 
@@ -240,7 +240,7 @@ i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Document
 //CapovoltoAlCentro_ditaAperte
 t 0 120
 { 20 CNT
-i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "/Users/giuliodemattia/Documents/campana/catalogo/CapovoltoAlCentro_ditaAperte.wav" 8.83
+i1	[0 + .5 * ($CNT.)+ (0.05 * $CNT. * $CNT.)] .3 "../../CapovoltoAlCentro_ditaAperte.wav" 8.83
 }
 */
 
