@@ -7,7 +7,7 @@ TIPO ?= ritardando
 REAPER_PROJECT := ../REAPER/ascolto_$(TIPO)/ascolto_$(TIPO).RPP
 
 SRCDIR ?= ../$(TIPO)
-SRCDIRSTROF := ../strofinati
+SRCDIRSTROF := ../../strofinati
 all: process open
 
 process:
